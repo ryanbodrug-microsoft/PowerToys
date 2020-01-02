@@ -39,7 +39,7 @@ int runner() {
   //init_global_error_handlers();
   #endif
   Trace::RegisterProvider();
-  winrt::init_apartment();
+  //winrt::init_apartment();
   start_tray_icon();
   int result;
   try {

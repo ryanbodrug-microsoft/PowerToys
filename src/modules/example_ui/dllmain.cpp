@@ -4,6 +4,7 @@
 #include <interface/win_hook_event_data.h>
 #include <common/settings_objects.h>
 #include "trace.h"
+#include "XamlWindow.h"
 
 extern "C" IMAGE_DOS_HEADER __ImageBase;
 
@@ -54,6 +55,8 @@ private:
 
     // Load initial settings from the persisted values.
     void init_settings();
+
+    XamlWindow xamlWindow;
 
 public:
     // Constructor

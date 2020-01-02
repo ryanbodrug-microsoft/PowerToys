@@ -4,11 +4,13 @@
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="trace.cpp" />
+    <ClCompile Include="XamlWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
     <ClInclude Include="trace.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="XamlWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="example_ui.rc" />
