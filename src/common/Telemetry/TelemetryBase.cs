@@ -16,10 +16,10 @@ namespace Microsoft.PowerToys.Telemetry
         None = 0,
 
         /// <nodoc/>
-        ProductAndServicePerformance = 0x0u,
+        ProductAndServicePerformance = 0x0000000001000000u,
 
         /// <nodoc/>
-        ProductAndServiceUsage = 0x0u,
+        ProductAndServiceUsage = 0x0000000002000000u,
     }
 
     /// <summary>
@@ -30,17 +30,17 @@ namespace Microsoft.PowerToys.Telemetry
         /// <summary>
         /// The event tag for this event source.
         /// </summary>
-        public const EventTags ProjectTelemetryTagProductAndServicePerformance = (EventTags)0x0u;
+        public const EventTags ProjectTelemetryTagProductAndServicePerformance = (EventTags)0x0000000001000000u;
 
         /// <summary>
         /// The event keyword for this event source.
         /// </summary>
-        public const EventKeywords ProjectKeywordMeasure = (EventKeywords)0x0;
+        public const EventKeywords ProjectKeywordMeasure = (EventKeywords)0x0000400000000000;
 
         /// <summary>
         /// Group ID for Powertoys project.
         /// </summary>
-        private static readonly string[] PowerToysTelemetryTraits = { "ETW_GROUP", "{42749043-438c-46a2-82be-c6cbeb192ff2}" };
+        private static readonly string[] PowerToysTelemetryTraits = { "ETW_GROUP", "{4f50731a-89cf-4782-b3e0-dce8c90476ba}" };
 
         /// <summary>
         /// Initializes a new instance of the <see cref="TelemetryBase"/> class.
