@@ -1,25 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using NUnit.Framework;
-using Wox.Infrastructure;
-using Wox.Plugin;
-using Microsoft.Plugin.Program.Programs;
+﻿using Microsoft.Plugin.Program.Storage;
 using Moq;
-using System.IO;
-using Microsoft.Plugin.Program.Storage;
+using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+using System.Text;
 using Wox.Infrastructure.Storage;
 
-namespace Wox.Test.Plugins
+namespace Microsoft.Plugin.Program.UnitTests.Storage
 {
     [TestFixture]
-    public class ProgramPluginTest
+    class ListRepositoryTests
     {
-      
-		
-		[Test]
-        public void StorageRepository_ShouldContainItem_WhenInitializedWithItem()
+
+        [Test]
+        public void Contains_ShouldReturnTrue_WhenListIsInitializedWithItem()
         {
             //Arrange
             var itemName = "originalItem1";
@@ -34,7 +28,7 @@ namespace Wox.Test.Plugins
         }
 
         [Test]
-        public void StorageRepository_ShouldContainItem_AfterAdd()
+        public void Contains_ShouldReturnTrue_WhenListIsUpdatedWithAdd()
         {
             //Arrange
             var mockStorage = new Mock<IStorage<IList<string>>>();
@@ -50,7 +44,7 @@ namespace Wox.Test.Plugins
         }
 
         [Test]
-        public void StorageRepository_ShouldRemoveAnItem_WhenItExistsInTheList()
+        public void Contains_ShouldReturnFalse_WhenListIsUpdatedWithRemove()
         {
             //Arrange
             var itemName = "originalItem1";

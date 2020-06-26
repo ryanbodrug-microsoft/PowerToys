@@ -12,7 +12,7 @@ namespace Wox.Infrastructure.Storage
     /// Storage object using binary data
     /// Normally, it has better performance, but not readable
     /// </summary>
-    public class BinaryStorage<T>
+    public class BinaryStorage<T> : IStorage<T>
     {
         public BinaryStorage(string filename)
         {
