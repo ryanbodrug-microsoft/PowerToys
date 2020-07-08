@@ -3,18 +3,20 @@ using Microsoft.Plugin.Program.Programs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Wox.Infrastructure.Storage;
 
+[assembly: InternalsVisibleTo("Microsoft.Plugin.Program.UnitTests")]
 namespace Microsoft.Plugin.Program.Storage
 {
     /// <summary>
     /// A repository for storing packaged applications such as UWP apps or appx packaged desktop apps.
     /// This repository will also monitor for changes to the PackageCatelog and update the repository accordingly
     /// </summary>
-    internal class PackageRepository : ListRepository<UWP.Application>, IRepository<UWP.Application>, IProgramRepository
+    internal class PackageRepository : ListRepository<UWP.Application>, IProgramRepository
     {
         IPackageCatalog _packageCatalog;
         public PackageRepository(IPackageCatalog packageCatalog, IStorage<IList<UWP.Application>> storage) : base(storage)

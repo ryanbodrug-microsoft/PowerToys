@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 using Windows.ApplicationModel;
 using Windows.Foundation;
+using System.Runtime.CompilerServices;
 
+[assembly: InternalsVisibleTo("DynamicProxyGenAssembly2")]
+[assembly: InternalsVisibleTo("Microsoft.Plugin.Program.UnitTests")]
 namespace Microsoft.Plugin.Program.Programs
 {
     internal interface IPackageCatalog
